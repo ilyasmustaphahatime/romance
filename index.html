@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>For My Beautiful Hajaro &#10084;&#65039;</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="float-area" aria-hidden="true"></div>
+
+  <header class="hero">
+    <div class="hero-inner">
+      <p class="eyebrow">A little place made just for Hajaro</p>
+      <h1 class="title">For My Beautiful Hajaro &#10084;&#65039;</h1>
+      <p class="subtitle">Not a perfect website. Just a soft little corner filled with the things I feel every time I think about you.</p>
+      <div class="hero-actions">
+        <button id="surpriseBtn" class="btn primary">Open a surprise</button>
+        <a href="#love-letter" class="btn ghost">Read my letter</a>
+      </div>
+      <div class="hero-tags" aria-label="Sweet little details">
+        <span class="tag">Your smile stays with me</span>
+        <span class="tag">Your kindness feels rare</span>
+        <span class="tag">You make life softer</span>
+      </div>
+      <p class="live-line">Right now I am thinking: <span id="statusText">your smile makes every day look better.</span></p>
+    </div>
+
+    <aside class="postcard" aria-label="Love note postcard">
+      <div class="postcard-stamp">Special Delivery</div>
+      <p class="postcard-label">To:</p>
+      <p class="postcard-name">Hajaro</p>
+      <p class="postcard-note">Every little part of this page points back to you.</p>
+      <div class="postcard-meta">
+        <span>Favorite view: your smile</span>
+        <span>Favorite feeling: being close to you</span>
+      </div>
+      <button id="postcardBtn" class="postcard-btn" type="button">Tap the note</button>
+    </aside>
+  </header>
+
+  <main>
+    <section class="dashboard" aria-label="Romantic dashboard">
+      <div class="section-head">
+        <h2 class="section-title">Little Reasons &amp; Moments</h2>
+        <p class="section-copy">Each card opens a different piece of my heart, with a few extra details that make it feel more like us and less like a template.</p>
+      </div>
+
+      <div class="cards">
+        <button class="card" data-key="why" type="button">
+          <span class="card-kicker">01</span>
+          <span class="card-title">Why I Love You</span>
+          <span class="card-hint">Your exact note, exactly the way you wrote it</span>
+        </button>
+        <button class="card" data-key="smile" type="button">
+          <span class="card-kicker">02</span>
+          <span class="card-title">My Favorite Smile</span>
+          <span class="card-hint">The smile that changes the whole mood of my day</span>
+        </button>
+        <button class="card" data-key="safe" type="button">
+          <span class="card-kicker">03</span>
+          <span class="card-title">Your Kindness</span>
+          <span class="card-hint">The softness in you that always stands out</span>
+        </button>
+        <button class="card" data-key="forever" type="button">
+          <span class="card-kicker">04</span>
+          <span class="card-title">My Love for You</span>
+          <span class="card-hint">The part that keeps growing every day</span>
+        </button>
+      </div>
+    </section>
+
+    <section class="details-strip" aria-label="Interactive love notes">
+      <div class="section-head">
+        <h2 class="section-title">Little Things About You</h2>
+        <p class="section-copy">Tap a note and the message changes, like flipping through tiny thoughts I keep about you.</p>
+      </div>
+
+      <div class="note-grid" role="tablist" aria-label="Love notes">
+        <button class="note-card active" data-note="smile" type="button" aria-pressed="true">Your smile</button>
+        <button class="note-card" data-note="energy" type="button" aria-pressed="false">Your energy</button>
+        <button class="note-card" data-note="heart" type="button" aria-pressed="false">Your heart</button>
+      </div>
+
+      <article class="note-display" id="noteDisplay" aria-live="polite">
+        <p class="note-label">Current thought</p>
+        <p id="noteText" class="note-text">Your smile has this quiet power. It can calm me, lift me, and make even a simple moment feel unforgettable.</p>
+      </article>
+    </section>
+
+    <section id="love-letter" class="love-letter">
+      <div class="section-head">
+        <h2 class="section-title">A Little Love Letter</h2>
+        <p class="section-copy">Something slower, warmer, and more personal than a one-line note.</p>
+      </div>
+
+      <article class="letter">
+        <p>Hajaro,</p>
+        <p>I wanted this page to feel a little more alive, because that is what you do to my world. You make quiet moments feel meaningful, and you turn simple days into memories that stay in my heart longer than they should.</p>
+        <p>I love the sweetness in your smile, the kindness in the way you treat people, and the calm I feel when I think about you. Even when I do not know how to explain everything perfectly, one thing is always clear to me: loving you feels natural.</p>
+        <p class="closing">Always yours, &#10084;&#65039;</p>
+      </article>
+    </section>
+  </main>
+
+  <div id="modal" class="modal" aria-hidden="true">
+    <div class="modal-backdrop"></div>
+    <div class="modal-inner" role="dialog" aria-labelledby="modal-title" aria-modal="true">
+      <button id="modalClose" class="modal-close" aria-label="Close">&#10005;</button>
+      <div class="modal-content">
+        <p id="modal-tag" class="modal-tag">A Love Note</p>
+        <h3 id="modal-title" class="modal-title">A Love Note</h3>
+        <div id="modal-body" class="modal-body"></div>
+        <ul id="modal-details" class="modal-details"></ul>
+        <div class="modal-footer">
+          <button id="modal-heart" class="btn heart" type="button">Send Love</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <p>This little corner is yours.</p>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
